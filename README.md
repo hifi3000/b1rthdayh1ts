@@ -11,3 +11,7 @@ By typing in your birthday, you will get all the number one songs of each year, 
 * Collect all number one songs from germany. Fill the database.
 * PHP to get the Information from the Database.
 * Make it look nice with CSS.
+
+## Known issues
+* Birthdays before 1954 (before Germany had charts) - the year and birthday is off
+* Birthdays in the beginning of the year - the database call is selecting the closest earlist date but doesn't look into december the year before
