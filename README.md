@@ -7,9 +7,9 @@ By typing in your birthday, you will get all the number one songs of each year, 
 
 Workflow:
 
-1.) Collect all number one songs from germany.
+1.) Database (design and create) for all the information (Datasource: Wikipedia).
 
-2.) First I designed and created a database for all the information (Datasource: Wikipedia).
+2.) Collect all number one songs from germany. Fill the database.
 
 3.) PHP to get the Information from the Database.
 
