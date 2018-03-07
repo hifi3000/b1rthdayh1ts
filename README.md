@@ -12,6 +12,17 @@ By typing in your birthday, you will get all the number one songs of each year, 
 * PHP to get the Information from the Database.
 * Make it look nice with CSS.
 
-## Known issues
+## Known issues (not sorted)
 * Birthdays before 1954 (before Germany had charts): The year and birthday is off
 * Birthdays in the beginning of the year: The database call is selecting the closest earlist date but doesn't get late december charts in  the year before
+* Maintenance: Still some UTF-8 problems in the database-source
+* Maintenance: Find better song versions on Spotify (caused by differance between source and Spotify API in title and/or artist)
+* Not perfectly adjusted for a device with a smaller screen.
+
+## To-Do (not sorted)
+* Create output as a playlist on Spotify
+* Share this page and output on social media
+* Add US / UK number one songs (and also other countries)
+* Add amazon affiliate links ;-)
+* Provide other searches (i.e. by year, by artist)
+* Add Footer
