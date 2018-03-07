@@ -10,6 +10,7 @@
 	<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/selecttable.js"></script>
 </head>
 <?php
 	include 'php/db.php';
@@ -23,34 +24,41 @@
 <div class="navbar_left">
 	<a href='http://b1rthdayh1ts.attack100.de'>HOME</a>
 </div>
+<div class="navbar_center">
+	<form method="get" action="index.php?">
+		<label for="birthday">YOUR BIRTHDAY:</label>
+		<?php 
+		if(isset($_GET[go01])) {
+			$birthday=$_GET[birthday];
+			if (preg_match("#^[0-9]{2}.[0-9]{2}.[0-9]{4}$#", $birthday)){
+				echo "<input type='text' id='birthday' name='birthday' value=\"$birthday\" autofocus>";
+			}
+			else echo "<input type='text' id='birthday' name='birthday' placeholder='i.e. 21.02.1984' autofocus>";
+		}
+		else echo "<input type='text' id='birthday' name='birthday' placeholder='21.02.1984' autofocus>";
+		?>
+		<input type="submit" name="go01" value="&#xf002;">
+	</form>
+</div>
+<div class="navbar_right">
+	<a href="social media"></a>
+</div>
 </div>
 
 <div class="row">
 	<div class="main">
 	<?php
 	echo "<div class=main_row>";
-	if(isset($_GET[go03])) {
+	if(isset($_GET[go01])) {
 		$birthday=$_GET[birthday];
 		if (!preg_match("#^[0-9]{2}.[0-9]{2}.[0-9]{4}$#", $birthday)){
 			echo "<p class='warning'>please type your birthday in digits as <i>'DD.MM.YYYY'</i></p>";
-			echo "<h4>YOUR BIRTHDAY:</h4>";
-			echo "<form method='get' action='index.php?'>";
-			echo "<input type='text' name='birthday' placeholder='i.e.: 21.02.1984' autofocus>";
-			echo "<button type='submit' name='go03'><i class='fa fa-search'></i></button>";
-			echo "</form>";
 			die;
 		}
 	}
-	echo "<h4>YOUR BIRTHDAY:</h4>";
-	echo "<form method='get' action='index.php?' class='form_style'>";
-	if(isset($_GET[go03])) echo "<input type='text' name='birthday' value=\"$birthday\" autofocus>";
-	else echo "<input type='text' name='birthday' placeholder='21.02.1984' autofocus>";
-	echo "<button type='submit' name='go03'><i class='fa fa-search'></i></button>";
-	echo "</form>";
-	
 	echo "</div>";
 	echo "<div class=main_row>";
-	if(isset($_GET[go03])) {
+	if(isset($_GET[go01])) {
 		$bday_array=explode(".", $birthday);
 		$bday_array[3] = strftime("%B",mktime(0,0,0,$bday_array[1]));
 		if ($bday_array[0]=='1' || $bday_array[0]=='21' || $bday_array[0]=='31') { $bday_array[4]=$bday_array[0]."st"; }
