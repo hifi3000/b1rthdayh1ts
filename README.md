@@ -10,6 +10,6 @@ By typing in your birthday, you will get all the number one songs of each year, 
 * Database (design and create) for all the information (Datasource: Wikipedia).
 * Collect all number one songs from germany. Fill the database.
 * PHP to get the Information from the Database.
-* Make it look nice with CSSS.
+* Make it look nice with CSS.
 
 I'm sure, that this code can be improved.
