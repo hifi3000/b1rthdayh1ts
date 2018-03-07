@@ -16,7 +16,9 @@ By typing in your birthday, you will get all the number one songs of each year, 
 * Birthdays before 1954 (before Germany had charts): The year and birthday is off
 * Birthdays in the beginning of the year: The database call is selecting the closest earlist date but doesn't get late december charts in  the year before
 * Maintenance: Still some UTF-8 problems in the database-source
-* Maintenance: Find better song versions on Spotify (caused by differance between source and Spotify API in title and/or artist)
+* Maintenance: Find better song versions on Spotify (caused by difference between source and Spotify API in title and/or artist)
+* Minor CSS issue: align title (caused by cover size difference)
+* Minor CSS issue: algin artist (caused by short/long songtitle)
 * Not perfectly adjusted for a device with a smaller screen.
 
 ## To-Do (not sorted)
