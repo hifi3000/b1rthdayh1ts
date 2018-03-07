@@ -1,4 +1,4 @@
-# b1rthday h1ts
+# B1RTHDAY H1TS
 Get all the number one songs on each of your birthdays
 
 This was meant as a project/challenge/exercise.
