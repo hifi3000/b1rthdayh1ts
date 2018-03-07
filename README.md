@@ -5,10 +5,14 @@ This was meant as a project/challenge/exercise.
 
 By typing in your birthday, you will get all the number one songs of each year, that were the current number one on that date.
 
+Workflow:
 
-Collect all number one songs from germany.
-First I designed and created a database for all the information (Datasource: Wikipedia).
+1.) Collect all number one songs from germany.
 
-PHP to get the Information from the Database and make it nicer with CSS.
+2.) First I designed and created a database for all the information (Datasource: Wikipedia).
+
+3.) PHP to get the Information from the Database.
+
+4.) Make it look nice with CSSS.
 
 I'm sure, that this code can be improved.
