@@ -5,7 +5,7 @@ This was meant as a project/challenge/exercise - so, there is room for improveme
 
 By typing in your birthday, you will get all the number one songs of each year, that were the current number one on that date.
 
-Test it out here: [http://b1rthdayh1ts.howdynow.de/](http://b1rthdayh1ts.howdynow.de/)
+Try it yourself here: [http://b1rthdayh1ts.howdynow.de/](http://b1rthdayh1ts.howdynow.de/)
 
 ### My Workflow:
 
