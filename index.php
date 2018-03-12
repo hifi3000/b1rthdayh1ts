@@ -22,7 +22,6 @@
 
 <div class="navbar">
 <div class="navbar_left">
-	<a href='http://b1rthdayh1ts.attack100.de'>HOME</a>
 </div>
 <div class="navbar_center">
 	<form method="get" action="index.php?">
