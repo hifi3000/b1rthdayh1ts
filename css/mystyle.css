@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -9,27 +9,32 @@ body {
 	font-size: 22px;
 }
 
+label {
+	vertical-align:middle;
+	padding-right: 1%;
+}
+
 input[type=text], select {
-    width: 50%;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+	width: 50%;
+	padding: 12px 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
 input[type="submit"] {
-    font-family: FontAwesome;
+	font-family: FontAwesome;
 	width: 10%;
 	padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
 .header {
 	font-family: ABeeZee;
-    padding: 1px;
-    text-align: center;
-    background: #75704E;
-    color: #F4EBBE;
+	padding: 1px;
+	text-align: center;
+	background: #75704E;
+	color: #F4EBBE;
 }
 .big {
 	font-family: Caveat;
@@ -38,32 +43,32 @@ input[type="submit"] {
 }
 
 .navbar {
-    display: flex;
-    background-color: #8BA6A9;
+	display: flex;
+	background-color: #8BA6A9;
 	justify-content: space-between;
 }
 
 .navbar_left {
-    display: flex;
-    background-color: #8BA6A9;
+	display: flex;
+	background-color: #8BA6A9;
 	flex-basis: 30%;
 }
 
 .navbar_left a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
+	color: white;
+	padding: 14px 20px;
+	text-decoration: none;
+	text-align: center;
 }
 
 .navbar_left a:hover {
-    background-color: #9BBDF9;
-    color: black;
+	background-color: #9BBDF9;
+	color: black;
 }
 
 .navbar_center{
 	display: flex;
-    background-color: #8BA6A9;
+	background-color: #8BA6A9;
 	flex-basis: 50%;
 	justify-content: center;
 	white-space: nowrap;
@@ -71,25 +76,25 @@ input[type="submit"] {
 }
 
 .navbar_center label {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 .navbar_right{
 	display: flex;
-    background-color: #8BA6A9;
+	background-color: #8BA6A9;
 	flex-basis: 30%;
 }
 
 .row {  
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .main {
-    flex: 1;
-    background-color: white;
-    padding: 20px;
+	flex: 1;
+	background-color: white;
+	padding: 20px;
 }
 
 .main_row {
@@ -106,12 +111,12 @@ input[type="submit"] {
 	max-width: 1200px;
 	margin: auto;
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
 .item { 
-    background-color: #9BBDF9;
+	background-color: #9BBDF9;
 	border-radius: 15px;
 	padding: 13px;
 	justify-content: center;
