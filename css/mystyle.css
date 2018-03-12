@@ -15,16 +15,14 @@ label {
 }
 
 input[type=text], select {
-	width: 50%;
-	padding: 12px 12px;
+	padding: 9px 12px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
 
 input[type="submit"] {
 	font-family: FontAwesome;
-	width: 10%;
-	padding: 12px 12px;
+	padding: 10px 12px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
