@@ -77,13 +77,22 @@
 		if ($bday_array[2]<=1954) echo "<p>List of number-one songs in Germany on $bday_array[3] $bday_array[4] (starting in $bday_array[2]*)<br><div class='note'>*Did you know that the German charts started in March 1954?</div></p>";
 		else echo "<p>List of number-one songs in Germany on $bday_array[3] $bday_array[4] (starting in $bday_array[2])</p>";
 		
+		$j=0;
+		$result=[];
+		$year=1954;
+		
 		$sql="SELECT * FROM bh_date INNER JOIN bh_title ON bh_title.id = bh_date.title_id INNER JOIN bh_artist ON bh_title.artist_id = bh_artist.id WHERE date IN ( SELECT MAX(date) FROM bh_date WHERE MONTH(date) <= '$bday_array[1]' AND DAY(date) <= '$bday_array[0]' GROUP BY YEAR(date)) ORDER BY `bh_date`.`date` DESC LIMIT $bday_array[5]";
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		mysqli_set_charset($conn,'utf8');
-		$result2 = $conn->query($sql);
+		for($i=date('Y'); $i>$year; $i--){
+			$request_date=$i."-".$bday_array[1]."-".$bday_array[0];
+			$sql="SELECT * FROM bh_date INNER JOIN bh_title ON bh_title.id = bh_date.title_id INNER JOIN bh_artist ON bh_title.artist_id = bh_artist.id WHERE date <= '$request_date' ORDER BY date DESC LIMIT 1;";
+			$result2 = $conn->query($sql);
+			if($result2->num_rows > 0) { while($row = $result2->fetch_assoc()) array_push($result,$row); }
+			$result[$j][year]=$i;
+			$j++;
+		}
 		$conn->close();
-		$result=[];
-		if($result2->num_rows > 0) { while($row = $result2->fetch_assoc()) array_push($result,$row); }
 		
 		// IS THERE ALREADY A CURRENT NUMBER ONE FOR THIS YEAR?
 		$latest=strtotime($result[0][date]);
