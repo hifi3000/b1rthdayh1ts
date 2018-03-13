@@ -24,8 +24,16 @@
 <div class="navbar_left">
 </div>
 <div class="navbar_center">
+</div>
+<div class="navbar_right">
+	<a href="social media"></a>
+</div>
+</div>
+
+<div class="row">
+	<div class="main">
 	<form method="get" action="index.php?">
-		<label for="birthday">YOUR BIRTHDAY:</label>
+		<label for="birthday">YOUR BIRTHDAY</label>
 		<?php 
 		if(isset($_GET[go01])) {
 			$birthday=$_GET[birthday];
@@ -38,14 +46,6 @@
 		?>
 		<input type="submit" name="go01" value="&#xf002;">
 	</form>
-</div>
-<div class="navbar_right">
-	<a href="social media"></a>
-</div>
-</div>
-
-<div class="row">
-	<div class="main">
 	<?php
 	echo "<div class=main_row>";
 	if(isset($_GET[go01])) {
