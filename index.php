@@ -58,6 +58,13 @@
 	echo "</div>";
 	echo "<div class=main_row>";
 	if(isset($_GET[go01])) {
+		// $bday_array[0] = Day / i.e. '18'
+		// $bday_array[1] = Month / i.e. '02'
+		// $bday_array[2] = Year / i.e. '1986'
+		// $bday_array[3] = Month / i.e. 'February'
+		// $bday_array[4] = added 'st' or 'nd' or 'rd' or 'th' / i.e. '18th'
+		// $bday_array[5] = creating the limit for database call: i.e. 2019 - 1986 = '33'
+		// $bday_array[6] = creating this year's birthday // i.e. '2018-02-18'
 		$bday_array=explode(".", $birthday);
 		$bday_array[3] = strftime("%B",mktime(0,0,0,$bday_array[1]));
 		if ($bday_array[0]=='1' || $bday_array[0]=='21' || $bday_array[0]=='31') { $bday_array[4]=$bday_array[0]."st"; }
