@@ -65,14 +65,18 @@
 		// $bday_array[4] = added 'st' or 'nd' or 'rd' or 'th' / i.e. '18th'
 		// $bday_array[5] = creating the limit for database call: i.e. 2019 - 1986 = '33'
 		// $bday_array[6] = creating this year's birthday // i.e. '2018-02-18'
+		// $bday_array[7] = creating birthday // i.e. '1986-02-18'
+		// $bday_array[8] = Day - creating single digit // i.e. '1' instead of '01'
 		$bday_array=explode(".", $birthday);
 		$bday_array[3] = strftime("%B",mktime(0,0,0,$bday_array[1]));
-		if ($bday_array[0]=='1' || $bday_array[0]=='21' || $bday_array[0]=='31') { $bday_array[4]=$bday_array[0]."st"; }
-		elseif ($bday_array[0]=='2' || $bday_array[0]=='22') { $bday_array[4]=$bday_array[0]."nd"; }
-		elseif ($bday_array[0]=='3' || $bday_array[0]=='23') { $bday_array[4]=$bday_array[0]."rd"; }
-		else { $bday_array[4]=$bday_array[0]."th"; }
+		$bday_array[8]=ltrim($bday_array[0], '0');
+		if ($bday_array[8]=='1' || $bday_array[8]=='21' || $bday_array[8]=='31') { $bday_array[4]=$bday_array[8]."st"; }
+		elseif ($bday_array[8]=='2' || $bday_array[8]=='22') { $bday_array[4]=$bday_array[8]."nd"; }
+		elseif ($bday_array[8]=='3' || $bday_array[8]=='23') { $bday_array[4]=$bday_array[8]."rd"; }
+		else { $bday_array[4]=$bday_array[8]."th"; }
 		$bday_array[5]=date('Y', strtotime('+1 year'))-$bday_array[2];
 		$bday_array[6]=date('Y')."-".$bday_array[1]."-".$bday_array[0];
+		$bday_array[7]=$bday_array[2]."-".$bday_array[1]."-".$bday_array[0];
 		
 		if ($bday_array[2]<=1954) echo "<p>List of number-one songs in Germany on $bday_array[3] $bday_array[4] (starting in $bday_array[2]*)<br><div class='note'>*Did you know that the German charts started in March 1954?</div></p>";
 		else echo "<p>List of number-one songs in Germany on $bday_array[3] $bday_array[4] (starting in $bday_array[2])</p>";
