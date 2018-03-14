@@ -107,6 +107,14 @@
 		}
 		$conn->close();
 		
+		// FILLING IN THE AGE
+		$j=$bday_array[5];
+		$j--;
+		for($i=0;$i<count($result);$i++){
+			$result[$i][age]=$j;
+			$j--;
+		}
+		
 		// IS THERE ALREADY A CURRENT NUMBER ONE FOR THIS YEAR?
 		$latest=strtotime($result[0][date]);
 		$bday=strtotime($bday_array[6]);
