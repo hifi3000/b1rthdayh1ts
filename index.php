@@ -84,6 +84,11 @@
 		$j=0;
 		$result=[];
 		
+		// WARNING
+		if ($bday_array[0]>31) echo "<p class='note warning'>WARNING: You typed '".$bday_array[0]."' as your birthday</p><div class='note warning'>you may want to check your date again</div><p>";
+		if ($bday_array[1]>12) echo "<p class='note warning'>WARNING: You typed '".$bday_array[1]."' as your birthmonth.</p><div class='note warning'>you may want to check your date again</div><p>";
+		if ($bday_array[2]<1923) echo "<p class='note warning'>Birthyear: ".$bday_array[2]."</p><div class='note warning'>you may want to check your date again</div><p>";
+				
 		// SETTING THE YEAR STRAIGHT
 		if ($bday_array[2]<1954) $year=1954;
 		else $year=$bday_array[2];
