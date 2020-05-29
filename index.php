@@ -17,7 +17,11 @@
 
 <body>
 <div class="header">
-<p><div class="big"><a href='/'>B1RTHDAY H1TS</a></div><br>What was number one on each of your birthdays?
+<p>
+  <div class="big">
+    <a href='/'>B1RTHDAY H1TS</a>
+  </div>
+  <br />What was number one on each of your birthdays?
 </div>
 
 <div class="navbar">
